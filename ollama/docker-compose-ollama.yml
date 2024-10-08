@@ -1,0 +1,11 @@
+version: 'ollama'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports: ["11435:11434"] # change the host port 11435
+    volumes:
+      - ./ollama:/root/.ollama
+    pull_policy: always
+    tty: true
+    restart: unless-stopped

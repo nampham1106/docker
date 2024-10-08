@@ -1,0 +1,5 @@
+.vscode
+/ollama/models/
+/ollama/ollama/**
+bin
+/qdrant/qdrant_data/

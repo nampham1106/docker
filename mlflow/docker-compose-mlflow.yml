@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mlflow:
+    build: 
+      context: mlflow/
+      args:
+        MLFLOW_VERSION: ${MLFLOW_VERSION}
+    ports:
+      - "2002:2002"
+    environment:
+      BACKEND_STORE_URI: sqlite:////mlflow/mlflow.db
+    volumes:
+      - ./run_env/data:/mlflow
